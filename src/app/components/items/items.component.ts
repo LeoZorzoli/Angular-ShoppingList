@@ -10,6 +10,7 @@ import { Item } from '../../models/item';
 export class ItemsComponent implements OnInit {
 
   items: Item[] = [];
+  total: number = 0;
 
   constructor() { }
 
@@ -30,6 +31,24 @@ export class ItemsComponent implements OnInit {
         completed: true
       }
     ]
+
+    this.getTotal();
+  }
+
+  deleteItem(item: Item) {
+    this.items = this.items.filter(i => i.id !== item.id);
+    this.getTotal();
+  }
+
+  toggleItem(item: Item) {
+    this.getTotal()
+  }
+
+  getTotal() {
+    this.total = this.items
+                  .filter(i => !i.completed)
+                  .map(i => i.quantity * i.price)
+                  .reduce( (acc, i) => acc += i, 0);
   }
 
 }

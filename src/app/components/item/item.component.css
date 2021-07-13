@@ -7,6 +7,15 @@ div {
     padding: 5px;
 }
 
+.completed {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+.completed .total {
+    color: #ccc;
+}
+
 .title {
     display: flex;
     width: 50%;
