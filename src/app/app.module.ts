@@ -9,6 +9,7 @@ import { ItemComponent } from './components/item/item.component';
 import { TotalComponent } from './components/total/total.component';
 import { AdditemComponent } from './components/additem/additem.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

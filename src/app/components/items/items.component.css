@@ -1,4 +1,5 @@
-.main-container {
-    width: 800px;
-    margin: 0 auto;
+.main{
+    margin-top: 40px;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
 }

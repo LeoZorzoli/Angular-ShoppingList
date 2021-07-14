@@ -16,16 +16,20 @@ export class ItemsComponent implements OnInit {
   constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
-    this.items = this.itemService.getItems();
-    this.getTotal();
+    this.itemService.getItems().subscribe(data => {
+      this.items = data;
+      this.getTotal();
+    });
   }
 
   deleteItem(item: Item) {
     this.items = this.items.filter(i => i.id !== item.id);
+    this.itemService.delteItem(item).subscribe();
     this.getTotal();
   }
 
   toggleItem(item: Item) {
+    this.itemService.toggleItem(item).subscribe();
     this.getTotal()
   }
 

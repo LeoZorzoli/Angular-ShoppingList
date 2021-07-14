@@ -1,7 +1,4 @@
-.row {
-    display: flex;
-    box-sizing: border-box;
-}
+
 
 div {
     padding: 5px;
@@ -17,9 +14,7 @@ div {
 }
 
 .title {
-    display: flex;
     width: 50%;
-    padding: 0 5px;
 }
 
 .price {

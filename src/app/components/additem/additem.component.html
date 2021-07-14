@@ -1,21 +1,17 @@
-<form action="" (ngSubmit)="onSubmit()">
-    <h2>Register new article</h2>
-    <div>
-        <label for="id">Id</label>
-        <input type="number" name="id" id="" [(ngModel)]="id">
-    </div>
-    <div>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="" [(ngModel)]="title">
-    </div>
-    <div>
-        <label for="price">Price</label>
-        <input type="text" name="price" id="" [(ngModel)]="price">
-    </div>
-    <div>
-        <label for="quantity">Quantity</label>
-        <input type="text" name="quantity" id="" [(ngModel)]="quantity">
-    </div>
-
-    <input type="submit" value="Create">
-</form>
+<div class="container form">
+    <form action="" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="" aria-describedby="name" name="name" placeholder="Item name" [(ngModel)]="title">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" id="" name="price" placeholder="Price" [(ngModel)]="price">
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="text" class="form-control" id="" name="quantity" placeholder="Quantity" [(ngModel)]="quantity">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Create" />
+    </form>
+</div>
